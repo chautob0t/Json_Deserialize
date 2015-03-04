@@ -22,7 +22,6 @@ namespace JSON_Deserialize
             InitializeComponent();
         }
 
-
         public class Mydata
         {
             public int id { get; set; }
@@ -56,15 +55,14 @@ namespace JSON_Deserialize
         private void Click_to_Deserialize_Click(object sender, RoutedEventArgs e)
         {
             var sample = ReadFile(@"Assets/samplejson.txt");
-
+            
+            // Deserialize JSON data into an "obj" of class RootObject
             RootObject obj = JsonConvert.DeserializeObject<RootObject>(sample);
 
-            //MessageBox.Show(sample);
-            //test.DataContext = obj;
+            // Set the dataContext of LongListSelector to the parse object
+            test.DataContext = obj;
 
             MessageBox.Show("Deserialization Succesfull!");
         }
-
-
     }
 }

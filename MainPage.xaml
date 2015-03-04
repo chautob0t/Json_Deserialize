@@ -42,24 +42,41 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="JSON Deserailize" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-            <TextBlock Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="DataBinding" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Deserializing JSON data using Json.NET framewrok. " VerticalAlignment="Top" Height="121" Width="436" FontSize="36"/>
-            <Button x:Name="Click_to_Deserialize" Content="Click to Deserialize" HorizontalAlignment="Left" Margin="10,525,0,0" VerticalAlignment="Top" Width="436" Click="Click_to_Deserialize_Click"/>
-          <!--  <phone:LongListSelector Name="test" ItemsSource="{Binding mydata}" HorizontalAlignment="Left" Height="384" Margin="10,136,0,0" VerticalAlignment="Top" Width="436">
+            <Button x:Name="Click_to_Deserialize" Content="Click to Deserialize" HorizontalAlignment="Left" Margin="10,525,0,0" VerticalAlignment="Top" Width="436" Click="Click_to_Deserialize_Click" />
+            <phone:LongListSelector Name="test" ItemsSource="{Binding mydata}" HorizontalAlignment="Left" Height="384" Margin="10,136,0,0" VerticalAlignment="Top" Width="436">
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="10 10 10 10">
-                            <TextBlock Text="{Binding name }" TextWrapping="Wrap" FontSize="18" />
-                            <TextBlock Text="{Binding location }" TextWrapping="Wrap" FontSize="18" />
+                        <StackPanel HorizontalAlignment="Left" Height="301" Margin="10,10,0,0" VerticalAlignment="Top" Width="436" Background="{StaticResource PhoneAccentBrush}">
+                            <StackPanel Orientation="Horizontal" Height="64">
+                                <TextBlock TextWrapping="Wrap" Margin="10" Text="Event ID:" Width="168" FontSize="24" Foreground="#FFD42323"/>
+                                <TextBlock Text="{Binding id }" TextWrapping="Wrap" Margin="10" Width="229" FontSize="24"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Height="64">
+                                <TextBlock TextWrapping="Wrap" Margin="10" Text="Name:" Width="168" FontSize="24" Foreground="#FFD42323"/>
+                                <TextBlock Text="{Binding name }" TextWrapping="Wrap" Margin="10" Width="229" FontSize="24"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Height="64">
+                                <TextBlock TextWrapping="Wrap" Margin="10" Text="Location:" Width="168" FontSize="24" Foreground="#FFD42323"/>
+                                <TextBlock Text="{Binding location }" TextWrapping="Wrap" Margin="10" Width="229" FontSize="24"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Height="64">
+                                <TextBlock TextWrapping="Wrap" Margin="10" Text="Date:" Width="168" FontSize="24" Foreground="#FFD42323"/>
+                                <TextBlock Text="{Binding date }" TextWrapping="Wrap" Margin="10" Width="229" FontSize="24"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Height="64">
+                                <TextBlock TextWrapping="Wrap" Margin="10" Text="Time:" Width="168" FontSize="24" Foreground="#FFD42323"/>
+                                <TextBlock Text="{Binding time }" TextWrapping="Wrap" Margin="10" Width="229" FontSize="24"/>
+                            </StackPanel>
                         </StackPanel>
                     </DataTemplate>
                 </phone:LongListSelector.ItemTemplate>
             </phone:LongListSelector>
-            -->
 
         </Grid>
 
